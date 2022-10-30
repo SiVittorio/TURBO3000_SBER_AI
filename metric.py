@@ -26,7 +26,7 @@ weighted_levenshtein = WeightedLevenshtein(
     insertion_cost_fn=insertion_cost,
     deletion_cost_fn=deletion_cost)
 
-bounds = reader.readtext("./1.jpg", paragraph=True)
+bounds = reader.readtext("<ПУТЬ К ФАЙЛУ>", paragraph=True)
 
 for i in range(len(bounds)):
     print(1 - (weighted_levenshtein.distance(bounds[i][1], '<ИСТИННАЯ СТРОКА>')) /
